@@ -1,6 +1,6 @@
-# 🚀 ServletReqResDemo
+# 🚀 ServletGetPostDemo
 
-This project demonstrates how to use `HttpServletRequest` and `HttpServletResponse` in a Java Servlet using form submission. It includes concepts like request parameters, request dispatcher, and `HttpSession`.
+This project demonstrates how to handle **GET** and **POST** HTTP methods using Java Servlets. It includes a form that submits user input via both GET and POST, showcasing how to extract request parameters and generate responses accordingly.
 
 ---
 
@@ -9,15 +9,14 @@ This project demonstrates how to use `HttpServletRequest` and `HttpServletRespon
 - Java 17+
 - Jakarta Servlet API (Tomcat 10+)
 - Eclipse IDE (Dynamic Web Project)
-- Git
-- HTML (for frontend form)
+- HTML (for frontend forms)
 
 ---
 
 ## 📥 Clone the Project
 
 ```bash
-git clone https://github.com/mhnuk2007/ServletReqResDemo.git
+git clone https://github.com/mhnuk2007/ServletGetPostDemo.git
 ```
 
 ---
@@ -26,28 +25,31 @@ git clone https://github.com/mhnuk2007/ServletReqResDemo.git
 
 1. Open Eclipse IDE.
 2. Go to: `File` → `Import` → `Existing Projects into Workspace`.
-3. Select the project root folder: `ServletReqResDemo`.
-4. Finish the import.
+3. Browse and select the folder: `ServletGetPostDemo`.
+4. Click `Finish`.
 
 ---
 
 ## 🖥️ Run on Tomcat Server
 
-1. Make sure Apache Tomcat 10+ is configured in Eclipse.
+1. Ensure Apache Tomcat 10+ is configured in Eclipse.
 2. Right-click on the project → `Run As` → `Run on Server`.
-3. Access in browser:  
-   [http://localhost:8080/ServletReqResDemo/index.html](http://localhost:8080/ServletReqResDemo/index.html)
+3. Open your browser and visit:  
+   [http://localhost:8080/ServletGetPostDemo/index.html](http://localhost:8080/ServletGetPostDemo/index.html)
 
 ---
 
 ## 📂 Project Structure
 
 ```
-ServletReqResDemo/
+ServletGetPostDemo/
 ├── src/
-│   └── main/java/com/learning/srrd/MyServlet.java
-├── WebContent/
-│   └── index.html
+│   └── main/java/com/learning/sgpd/Login.java
+│   └── main/webapp/index.html
+│   └── main/webapp/WEB-INF/lib
+├── build/
+│   └── classes/
+├── .settings/
 ├── .gitignore
 └── README.md
 ```
@@ -56,14 +58,12 @@ ServletReqResDemo/
 
 ## 📚 Key Concepts Demonstrated
 
-- **HttpServletRequest**
-  - Used to retrieve request data from the client (e.g., form fields).
-- **HttpServletResponse**
-  - Used to generate dynamic content (HTML) and respond to the client.
-- **RequestDispatcher**
-  - Used to forward requests to another resource (like JSP or another servlet).
-- **HttpSession**
-  - Used to store user data between multiple requests.
+- **GET Method**
+  - Sends form data via URL.
+  - Suitable for data retrieval and bookmarking.
+- **POST Method**
+  - Sends data in the request body.
+  - Suitable for sending sensitive data or performing actions.
 
 ---
 
